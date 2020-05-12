@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    padding: 5px 2%;
+}
+
+/*========= Logo ===========*/
+.logo {
+    padding: 12px 12px 12px 0px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #02b3e4;
+    font-size: 20px;
+    font-stretch: expanded;
+}
+
+/*======= Search Bar ========*/
+.searchbar {
+    background-color: #d1d2d47a;
+    align-self: center;
+    border-radius: 4px;
+}
+
+.searchbar i {
+    color: #02b3e4;
+    height: 18px;
+    padding: 13px;
+    align-items: flex-end;
+}
+
+.searchbar i:hover {
+    background-color: #02b3e4;
+    color: #fff;
+}
+
+.searchbar input[type="text"] {
+    border: none;
+    height: 25px;
+    padding: 10px;
+    width: 300px;
+    background-color: #fff0;
+    outline: none;
+}
+
+.searchbar input:focus,
+.searchbar input[type="text"]:focus + i {
+    border: 1px solid #d1d2d47a;
+    background-color: #fff;
+}
+
+.searchbar input:focus + i:hover {
+    background-color: #02b3e4;
+    color: #fff;
+}
+
+/*======== Main Menu ==========*/
+nav.main-menu {
+    align-self: center;
+}
+
+nav.main-menu > ul {
+    align-self: center;
+}
+
+nav.main-menu ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav.main-menu ul li > a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #525c65;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'Nunito Sans';
+    font-weight: 600;
+}
+
+/*+++++++ slide in animation ++++++++++*/
+.main-menu ul li:hover > a:before {
+    clip: rect(0, 190px, 190px, 0);
+}
+
+.main-menu ul li a:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: attr(data-content);
+    display: inline-block;
+    color: #02b3e4;
+    width: 100%;
+    clip: rect(0, 0, 0, 0);
+    -webkit-transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+    transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 400ms;
+}
+
+.main-menu ul li:hover div svg path {
+    stroke: #02b3e4 !important;
+}
+
+/*++++++++++++++ arrow down svg +++++++++++++++++*/
+nav.main-menu ul li div {
+    border: none;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+/*++++++++++++++ Sign In & get Registerd Button +++++++*/
+.register-btn {
+    background-color: #02b3e4;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.register-btn:hover {
+    box-shadow: 0px 0px 9px 2px #afadadc7;
+}
+
+.register-btn a {
+    color: #fff !important;
+    font-weight: 500 !important;
+}
+
+.sign-in-btn {
+    padding-left: 0px !important;
+}
+
+.sign-in-btn a {
+    padding: 2px 0px 2px 12px;
+    border-left: 1px solid #c7c7c7;
+    transition-delay: 0.2s;
+}
+
+.sign-in-btn:hover > a {
+    color: #02b3e4;
+}
+
+/*+++++++++ Sub Menu +++++++++*/
+#nav-menu-compare {
+    position: relative;
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.sub-menu {
+    z-index: 100;
+    display: none;
+    width: 180px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: opacity 0.3s ease;
+    background-color: #e5eff5;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0rem;
+    padding-right: 1rem;
+
+
+}
+
+/*=========== Menu Icon ================*/
+.menu-icon {
+    display: none;
+    color: black;
+    align-self: center;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*=========== Carousol ============*/
+#wrapper {
+    /*    width: 1310px;*/
+    height: 450px;
+    background-color: #0099ff;
+    margin: auto;
+    width: 96%;
+}
+
+
+#slider-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul#slider {
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ul#slider li {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    list-style: none;
+    width: 20%;
+    height: 100%;
+
+}
+
+ul#slider li:nth-child(1) {
+    background-color: #8e94db;
+}
+
+ul#slider li:nth-child(2) {
+    background-color: #4a5bdd;
+}
+
+ul#slider li:nth-child(3) {
+    background-color: #c48939;
+}
+
+ul#slider li:nth-child(4) {
+    background-color: #9fa08f;
+}
+
+ul#slider li:nth-child(5) {
+    background-color: #8d26e5;
+}
+
+.btns {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    top: 50%;
+    margin-top: -25px;
+    line-height: 57px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+
+
+    user-select: none;
+
+    transition: all 0.1s ease;
+}
+
+.btns:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#next {
+    right: -50px;
+    border-radius: 7px 0px 0px 7px;
+}
+
+#previous {
+    left: -50px;
+    border-radius: 0px 7px 7px 0px;
+}
+
+
+#slider-wrap.active #next {
+    right: 0px;
+}
+
+#slider-wrap.active #previous {
+    left: 0px;
+}
+
+/*ANIMATION*/
+#slider-wrap ul,
+#pagination-wrap ul li {
+    -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -moz-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    -ms-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+    transition: all 0.3s cubic-bezier(1, .01, .32, 1);
+}
+
+
+
+/*bar*/
+#pagination-wrap {
+    min-width: 20px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#pagination-wrap ul {
+    width: 100%;
+}
+
+#pagination-wrap ul li {
+    margin: 0 4px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    position: relative;
+    top: 0;
+
+
+}
+
+#pagination-wrap ul li.active {
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
+}
+
+/*++++++++++++++ 1 ++++++++++++++++++*/
+.slider-content {
+    align-content: center;
+    padding: 5%;
+    z-index: 10;
+    width: 40%;
+    position: relative;
+    right: 5%;
+    top: 6%;
+}
+
+.slider-content > h3 {
+    font-size: 30px;
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.slider-content > a {
+    position: relative;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 200;
+    padding: 10px;
+    background-color: crimson;
+    border-radius: 4px;
+}
+
+.slider-mobile-info {
+    margin-top: 20px;
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-mobile-info > div i {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 400;
+    color: crimson;
+}
+
+.slider-mobile-info-content {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.slider-mobile-info > div {
+    align-self: center;
+}
+
+.slider-mobile-info > div h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.slider-mobile-info div > p {
+    opacity: 0.8;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#slider li img {
+    position: relative;
+    height: 600px;
+    top: -15%;
+    align-self: center;
+    transform: rotate(25deg);
+    width: 40%;
+    left: 10%;
+}
+
+
+/* ================= Carousol End ==========*/
+
+/*============ Content Area ===========*/
+.content-section {
+    position: relative;
+    padding: 2%;
+    width: 96%;
+    z-index: 1000;
+}
+
+.section-title {
+    background-color: #f0f3f5;
+    border-left: 4px solid #02b3e4;
+}
+
+.section-title > h1 {
+    padding: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.section-title > p {
+    font-size: 15px;
+    display: inline-block;
+}
+
+.category-slider,
+.category-slider2,
+.category-slider-News,
+.category-slider-compare {
+    position: relative;
+    margin-top: 10px;
+    background-color: #fff;
+    height: 340px;
+}
+
+.section-slider,
+.section-slider2,
+.section-slider-News,
+.section-slider-compare {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.slider-container,
+.slider-container2,
+.slider-container-News,
+.slider-container-compare {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s cubic-bezier(1, .01, .32, 1);
+}
+
+.slider-container li,
+.slider-container2 li,
+.slider-container-News li,
+.slider-container-compare li {
+    float: left;
+    display: flex;
+    position: relative;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+
+}
+
+.content-box {
+    position: relative;
+    overflow: hidden;
+    width: 18%;
+    height: auto;
+    margin: 1% 2%;
+    background-color: #fff;
+    border: 1px solid #eaebf3;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -5px;
+    cursor: pointer;
+}
+.phone-title{
+    position: absolute;
+    top: 1%;
+    left: -10%;
+    padding: 2px 5px;
+    background-color: crimson;
+    color: #fff;
+    font-size: 12px;
+    width: 30%;
+    font-weight: 400;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+
+.content-box:hover {
+    border-color: #02b3e4;
+}
+
+.content-box img {
+    max-width: 150px;
+    height: 50%;
+    padding-top: 10px;
+
+}
+
+.content-box > h3 {
+    padding: 10px;
+    height: 18%;
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 400;
+    color: #02b3e4;
+}
+
+.content-box > p {
+    margin-top: 1%;
+    font-weight: 300;
+    color: crimson;
+}
+
+.News-content-box {
+    overflow: hidden;
+    width: 18%;
+    height: auto;
+    margin: 1%;
+    background-color: #fff;
+    border: 1px solid #eaebf3;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -5px;
+    cursor: pointer
+}
+
+.News-content-box img {
+    width: 100%;
+    height: 40%;
+    padding-bottom: 5px;
+}
+
+.News-content-box > h3 {
+    padding: 5px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    height: 22%;
+    overflow: hidden;
+}
+
+.News-content-box > p {
+    font-weight: 300;
+    text-align: justify;
+    padding: 5px;
+    font-size: 15px;
+    height: 26%;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.move-btn {
+    position: absolute;
+    color: #FFF;
+    background-color: rgba(168, 163, 163, 0.58);
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s ease;
+}
+
+.right,
+.up_right,
+.News_right {
+    right: 0%;
+}
+
+.left,
+.up_left,
+.News_left {
+    left: 0%;
+}
+
+/*============== Mobile Compare =============*/
+.compare-content-box {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 23%;
+    height: auto;
+    margin: 1%;
+    background-color: #fff;
+    border: 1px solid #eaebf3;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 0px 10px -5px;
+    cursor: pointer;
+}
+
+.compare-content-box .M1,.compare-content-box .M2  {
+    width: 50%;
+}
+
+.compare-content-box div > img {
+    height: 50%;
+    padding-top: 8%;
+}
+
+.compare-content-box div > h3 {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    height: 18%;
+    margin-top: 5%;
+    color: #02b3e4;
+}
+
+.compare-content-box div > p {
+    margin-top: 1%;
+    font-weight: 300;
+    color: crimson;
+}
+
+.compare-content-box .verses{
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    font-size: 16px;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(30, 81, 219, 0.58);
+    border-radius: 50%;
+    font-weight: 400;
+}
+
+
+/*============== Mobile Compare End =============*/
+
+/*============ Content Area End ===========*/
+
+/*========== footer ===========*/
+footer {
+    height: 100px;
+    margin: 2%;
+    background-color: cadetblue;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 14px !important;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .main-menu {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background-color: #ffffff;
+        justify-content: center;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        padding-bottom: 10px;
+    }
+
+    .main-menu ul {
+        display: none;
+        width: 150px;
+        align-self: center;
+
+    }
+
+    .sub-menu {
+        background-color: #ffffff;
+        z-index: 1000;
+    }
+
+    .sign-in-btn a {
+        border: none;
+    }
+
+    .main-menu ul li:hover > a:before {
+        clip: rect(0, 0, 0, 0);
+    }
+
+
+    .main-menu ul li {
+        display: block !important;
+        text-align: center;
+    }
+
+    .searchbar {
+        width: 280px;
+    }
+
+    .searchbar input[type="text"] {
+        height: 12px !important;
+        padding: 12px !important;
+        font-size: 12px !important;
+        width: 216px !important;
+    }
+
+    .searchbar i {
+        height: 12px !important;
+        padding: 11px 10px !important;
+        font-size: 14px !important;
+    }
+
+
+    /*    ============== Carousol 768px=============*/
+
+    #wrapper {
+        height: 250px !important;
+    }
+
+    /*    ++++++++ Slider Content ++++++++*/
+    .slider-content {
+        padding: 5%;
+        z-index: 10;
+        width: 45%;
+        position: relative;
+        left: -15% !important;
+    }
+
+    .slider-content > h3 {
+        font-size: 14px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .slider-content > a {
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 200;
+        padding: 8px;
+    }
+
+    .slider-mobile-info {
+        margin-top: 10px;
+        width: auto;
+        height: 80px;
+    }
+
+    .slider-mobile-info > div i {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .slider-mobile-info-content {
+        padding-left: 3px;
+    }
+
+    .slider-mobile-info > div h3 {
+        font-size: 12px;
+    }
+
+    .slider-mobile-info div > p {
+        opacity: 0.8;
+        font-size: 10px;
+    }
+
+    #slider li img {
+        height: 250px !important;
+        top: -90% !important;
+        left: 35% !important;
+        transform: rotate(25deg);
+        width: 50% !important;
+    }
+
+    .btns {
+        width: 30px;
+        height: 40px;
+        top: 53%;
+        margin-top: -25px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    /*        ========= Category slider 768px ===========*/
+
+    .category-slider,
+    .category-slider2,
+    .category-slider-News,
+    .category-slider-compare {
+        height: 280px !important;
+    }
+
+    .section-title > h1 {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .content-box {
+        margin: 1% 2% !important;
+        height: auto;
+    }
+
+    .News-content-box {
+        margin: 1% 2% !important;
+        height: auto;
+    }
+
+    .content-box h3 {
+        font-size: 15px !important;
+        height: 15% !important;
+        padding: 5px !important;
+    }
+
+    .News-content-box h3 {
+        font-size: 14px !important;
+        padding: 5px !important;
+    }
+
+    .content-box p {
+        margin-top: 2% !important;
+        font-size: 12px !important;
+    }
+
+    .News-content-box p {
+        margin-top: 0% !important;
+        font-size: 12px !important;
+    }
+
+    .content-box img {
+        height: 50% !important;
+    }
+
+
+    .move-btn {
+        width: 35px;
+        height: 35px;
+        margin-top: -15px;
+        line-height: 40px;
+    }
+
+    .slider-container,
+    .slider-container2,
+    .slider-container-News {
+        width: 500%;
+        height: 100%;
+    }
+    .slider-container-compare{
+        width: 400%;
+    }
+
+    .slider-container li,
+    .slider-container2 li,
+    .slider-container-News li {
+        float: left;
+        display: flex;
+        position: relative;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+
+    }
+    .compare-content-box {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    .logo {
+        font-size: 15px;
+    }
+
+    .searchbar input[type="text"] {
+        height: 18px;
+        padding: 10px;
+        font-size: 12px;
+        width: 180px;
+        background-color: #fff0;
+        outline: none;
+    }
+
+    .searchbar i {
+        height: 18px;
+        padding: 11px 8px;
+        font-size: 14px;
+    }
+
+    nav.main-menu ul li a {
+        font-size: 12px;
+    }
+
+    nav.main-menu ul li {
+        padding: 5px;
+    }
+
+    /*    ========== Carousol ==========*/
+    #slider li img {
+        height: 500px;
+        top: -10%;
+        left: 6%;
+    }
+
+    #wrapper {
+        height: 400px;
+    }
+
+    .slider-content h3 {
+        font-size: 26px;
+
+    }
+
+
+}
+
+@media screen and (max-width: 970px) {
+    .logo {
+        font-size: 12px;
+    }
+
+    .searchbar input[type="text"] {
+        height: 15px;
+        padding: 8px;
+        font-size: 10px;
+        width: 100px;
+        background-color: #fff0;
+        outline: none;
+    }
+
+    .searchbar i {
+        padding: 8px 5px;
+        font-size: 12px;
+        height: 15px;
+    }
+
+    nav.main-menu ul li a {
+        font-size: 12px;
+    }
+
+    nav.main-menu ul li {
+        padding: 5px;
+    }
+
+    /*    ========= Carousol ========*/
+    .slider-content {
+        width: 48%;
+        left: 2%
+    }
+
+    .slider-content h3 {
+        font-size: 25px;
+    }
+
+    /*        ============== Carousol End ==================*/
+    /*        ========= Category slider 920px ===========*/
+    .category-slider,
+    .category-slider2 {
+        height: 280px;
+    }
+
+    .category-slider-News {
+        height: 260px !important;
+    }
+
+    .content-box h3 {
+        font-size: 16px;
+        margin-top: 0%;
+        height: 16%;
+        padding: 8px;
+    }
+
+    .News-content-box h3 {
+        font-size: 14px;
+        margin-top: 0%;
+        height: 21%;
+        padding: 2px;
+    }
+
+    .News-content-box p {
+        font-size: 12px;
+        margin-top: 0%;
+        padding: 2px;
+    }
+
+    .content-box p {
+        margin-top: 4%;
+        font-size: 12px;
+    }
+
+}
